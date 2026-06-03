@@ -1,9 +1,15 @@
+// api.js
+// Si estamos en localhost, usamos el puerto 5000, sino usamos la ruta relativa '/'
 const API_BASE_URL = window.location.hostname === 'localhost' 
   ? 'http://localhost:5000' 
-  : ''; // Ruta relativa para producción
+  : ''; 
 
 export async function getAvailability(date, duration) {
-  // Al usar la cadena vacía en producción, la petición será dirigida a /api/...
+  // Al usar API_BASE_URL (que será '' en producción), la URL resultante será /api/...
   const res = await fetch(`${API_BASE_URL}/api/availability?date=${date}&duration=${duration}`);
-  // ... resto del código
+  if (!res.ok) {
+    const err = await res.json();
+    throw new Error(err.error || 'Error al obtener la disponibilidad.');
+  }
+  return res.json();
 }
