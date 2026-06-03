@@ -1,6 +1,12 @@
 {
   "rewrites": [
-    { "source": "/_/backend/:path*", "destination": "/backend/index.js" },
-    { "source": "/(.*)", "destination": "/frontend/$1" }
+    {
+      "source": "/_/backend/:path*",
+      "destination": "/backend/index.js"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/frontend/$1"
+    }
   ]
 }

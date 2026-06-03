@@ -132,5 +132,10 @@ app.use((req, res) => {
   res.status(404).json({ error: 'Ruta no encontrada.' });
 });
 
+
+if (process.env.NODE_ENV !== 'production') {
+  app.listen(3000, () => console.log('Servidor local en puerto 3000'));
+}
+
 // Iniciar servidor
 export default app;
