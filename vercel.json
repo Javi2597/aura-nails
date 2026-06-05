@@ -3,7 +3,9 @@
   "buildCommand": "cd frontend && npm run build",
   "outputDirectory": "frontend/dist",
   "functions": {
-    "backend/index.js": {}
+    "backend/index.js": {
+      "maxDuration": 10
+    }
   },
   "rewrites": [
     {
