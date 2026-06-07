@@ -1,5 +1,7 @@
 # AURA • Nails & Estética Studio
 
+**Demo en vivo:** [aura-nails.vercel.app](https://aura-nails.vercel.app)
+
 Este proyecto consiste en una Landing Page moderna y minimalista para un salón de manicuría, pedicuría y cuidado de uñas. Cuenta con un sistema de reserva de turnos (booking) interactivo conectado en tiempo real con Google Calendar mediante OAuth 2.0.
 
 El backend incluye un **Modo Simulación** automático. Si las credenciales de Google no están configuradas, el servidor almacena las reservas en memoria para que puedas probar todo el flujo de inmediato sin errores.
